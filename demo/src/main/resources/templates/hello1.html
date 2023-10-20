@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <h1>home</h1>-->
+    <h1>camera</h1>
+    <form>
+
+    </form>
+    <input type="file" name="file" accept="image/*" />
+<!--    <button onclick="fileAttach()">파일추가</button>-->
+<!--    <input type="file" accept="image/*" capture="camera">-->
+</body>
+<script>
+    const locationFunc = () => {
+        console.log("hello1 page load");
+        navigator.geolocation.getCurrentPosition(function(pos){
+            console.log(pos);
+            let latitude = pos.coords.latitude; // 위도
+            let longitude = pos.coords.longitude; // 경도
+            console.log("현재 위치는 : " + latitude + ", "+ longitude);
+        })
+    }
+
+    locationFunc();
+</script>
+</html>
